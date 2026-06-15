@@ -1,7 +1,5 @@
 package com.smartQ.smartQ.entity;
-
-
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,6 +23,7 @@ public class Booking {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @JsonIgnore
     private User user;
 
     @ManyToOne
@@ -33,4 +32,5 @@ public class Booking {
 
     @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
     private QueueEntry queueEntry;
+
 }

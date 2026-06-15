@@ -1,7 +1,4 @@
 package com.smartQ.smartQ.controller;
-
-
-
 import com.smartQ.smartQ.entity.Vendor;
 import com.smartQ.smartQ.service.VendorService;
 import org.springframework.web.bind.annotation.*;

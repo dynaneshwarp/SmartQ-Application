@@ -1,5 +1,6 @@
 package com.smartQ.smartQ.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -36,11 +37,14 @@ public class User {
     // Relationships
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
     private Vendor vendor;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user")
     private List<Booking> bookings;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user")
     private List<Review> reviews;
 }

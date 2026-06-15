@@ -1,12 +1,8 @@
 package com.smartQ.smartQ.sericeImpl;
-
-
-
 import com.smartQ.smartQ.entity.User;
 import com.smartQ.smartQ.repository.UserRepository;
 import com.smartQ.smartQ.service.UserService;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 

@@ -2,6 +2,7 @@ package com.smartQ.smartQ.entity;
 
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -27,8 +28,10 @@ public class Vendor {
 
     @OneToOne
     @JoinColumn(name = "user_id")
+    @JsonIgnore
     private User user;
 
     @OneToMany(mappedBy = "vendor", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Shop> shops;
 }

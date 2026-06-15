@@ -1,15 +1,10 @@
 package com.smartQ.smartQ.sericeImpl;
-
-
-
 import com.smartQ.smartQ.entity.Slot;
 import com.smartQ.smartQ.repository.SlotRepository;
 import com.smartQ.smartQ.service.SlotService;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
-
 @Service
 public class SlotServiceImpl implements SlotService {
 
@@ -48,4 +43,5 @@ public class SlotServiceImpl implements SlotService {
     public void deleteSlot(Integer id) {
         slotRepository.deleteById(id);
     }
+
 }
